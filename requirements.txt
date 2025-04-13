@@ -1,1 +1,1 @@
-pip install pyautogui pyqt5
+pip install pyautogui pyqt5 Thread
