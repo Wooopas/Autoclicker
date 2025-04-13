@@ -1,26 +1,26 @@
 # Autoclicker
-Autoclicker That works on discord.
+Autoclicker that works on Discord.
 
-The concept was not invented in any way by me. I just wanted a small project for myself, there is a lot of bugs, like the recorder not working etc.
+The concept was not invented by me in any way. I just wanted a small project for myself. There are a lot of bugs, like the recorder not working, etc.
 
 TODO:
 
-0. Fix default key not working
-1. Fix the repeat timer, so it works and you don't need to use both repeat until stop and repeat for fixed times
-2. Fix recorder so it actually works, and does not crash.
-3. Add comments to the code (so others can understand what pain in the ass is python.)
-4. Make a dark/light mode so you can switch.
+1. Fix the default key not working.
+2. Fix the repeat timer so it works and you don't need to use both "Repeat Until Stop" and "Repeat for Fixed Times."
+3. Fix the recorder so it actually works and does not crash.
+4. Add comments to the code (so others can understand the pain in the ass that is Python).
+5. Make a dark/light mode so you can switch.
 
-Now that the boring part is over, lets get into the juicy stuff.
+Now that the boring part is over, let's get into the juicy stuff.
 
 ![image](https://github.com/user-attachments/assets/d435b6f5-f3b7-455b-a7f0-7db5533403ee)
 
-The autoclicker works in discord, I was testing on a bot for autofarm on buttons.
+The autoclicker works in Discord. I was testing it on a bot for autofarming buttons.
 
-Tradicional autoclickers just click, in my the code you can see that it will move the mouse after every click, so discord see's that the mouse is moved, no matter if it's the same coordinate set by you.
-Again, you can input ur coordinates by yourself or use pick location which will log your coordinates after 3s.
+Traditional autoclickers just click, but in my code, you can see that it moves the mouse after every click so Discord sees that the mouse is moved, no matter if it's the same coordinate set by you.  
+Again, you can input your coordinates by yourself or use "Pick Location," which will log your coordinates after 3 seconds.
 
-The interval is between 50ms and 5s. it can be changed in the code. (You will find it better when I add comments)
+The interval is between 50ms and 5s. It can be changed in the code. (You will find it easier when I add comments.)
 
 # Requirements
 
