@@ -5,11 +5,8 @@ The concept was not invented by me in any way. I just wanted a small project for
 
 TODO:
 
-1. Fix the default key not working.
-2. Fix the repeat timer so it works and you don't need to use both "Repeat Until Stop" and "Repeat for Fixed Times."
-3. Fix the recorder so it actually works and does not crash.
-4. Add comments to the code (so others can understand the pain in the ass that is Python).
-5. Make a dark/light mode so you can switch.
+1. Find or make a new and a better UI.
+2. Fix error handling on user's side.
 
 Now that the boring part is over, let's get into the juicy stuff.
 
