@@ -1,7 +1,7 @@
 # Autoclicker
-Autoclicker that works on Discord.
+Autoclicker that works on everywhere, anytime.
 
-The concept was not invented by me in any way. I just wanted a small project for myself. There are a lot of bugs, like the recorder not working, etc.
+The concept was not invented by me in any way. I just wanted a small project for myself.
 
 TODO:
 
