@@ -8,16 +8,31 @@ TODO:
 1. Find or make a new and a better UI.
 2. Fix error handling on user's side.
 
-Now that the boring part is over, let's get into the juicy stuff.
+# UI
 
-![image](https://github.com/user-attachments/assets/d435b6f5-f3b7-455b-a7f0-7db5533403ee)
+![image](https://github.com/user-attachments/assets/dd156837-7e45-4d08-bc61-a14f99b768f9)
+![image](https://github.com/user-attachments/assets/fdefcfa6-0d7f-49f4-88ec-2f823fc3b2b7)
 
-The autoclicker works in Discord. I was testing it on a bot for autofarming buttons.
+# Features
 
-Traditional autoclickers just click, but in my code, you can see that it moves the mouse after every click so Discord sees that the mouse is moved, no matter if it's the same coordinate set by you.  
-Again, you can input your coordinates by yourself or use "Pick Location," which will log your coordinates after 3 seconds.
+1. **Automatic Clicking**:
+   - Simulate **single** or **double** clicks with **left** or **right** mouse buttons.
 
-The interval is between 50ms and 5s. It can be changed in the code. (You will find it easier when I add comments.)
+2. **Adjustable Click Interval**:
+   - Set the click interval between **50 ms to 5000 ms**.
+
+3. **Repeat Modes**:
+   - **Fixed Times**: Click a set number of times.
+   - **Until Stopped**: Keep clicking until stopped.
+
+4. **Cursor Position**:
+   - Manually enter the cursor's X and Y position or pick it from the screen.
+
+5. **Hotkey Support**:
+   - Start/Stop clicking with a customizable **hotkey** (default: F4).
+
+6. **User Interface**:
+   - Simple, easy-to-use GUI with **Dark/Light mode** toggle.
 
 # Requirements
 
