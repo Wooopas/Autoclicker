@@ -24,7 +24,7 @@ def start_thread():
         thread.daemon = True  # Ensures thread is stopped when the program exits
         thread.start()
     except Exception as e:
-        print(f"Error starting thread: {e}")
+        show_error_message(f"Error starting thread: {e}")
 
 # Clicking process logic using QTimer for non-blocking sleep
 def start_clicking():
@@ -46,11 +46,12 @@ def start_clicking():
             elif repeat_mode == 'until_stopped' and not clicking:
                 break
 
-            # Use QTimer for non-blocking sleep instead of time.sleep
+            # Use QTimer to schedule the next click, keeping the event loop running
             QTimer.singleShot(int(click_interval * 1000), lambda: None)  # Delay for click_interval
-            QApplication.processEvents()  # Ensure GUI is responsive during sleep
+            QApplication.processEvents()  # Ensure GUI is responsive during the sleep
+
     except Exception as e:
-        print(f"Error during clicking: {e}")
+        show_error_message(f"Error during clicking: {e}")
         stop_clicking()
 
 # Stop clicking process
@@ -58,6 +59,14 @@ def stop_clicking():
     global clicking
     clicking = False
     print("Autoclicker stopped.")
+
+# Show error message in GUI
+def show_error_message(message):
+    msg_box = QMessageBox()
+    msg_box.setIcon(QMessageBox.Critical)
+    msg_box.setWindowTitle("Error")
+    msg_box.setText(message)
+    msg_box.exec_()
 
 # Main AutoClicker Application
 class AutoClickerApp(QWidget):
@@ -69,7 +78,7 @@ class AutoClickerApp(QWidget):
             self.shortcut = QShortcut(QKeySequence(hotkey), self)
             self.shortcut.activated.connect(self.toggle_clicking)  # Toggle between start/stop
         except Exception as e:
-            print(f"Error initializing GUI: {e}")
+            show_error_message(f"Error initializing GUI: {e}")
             sys.exit(1)
 
     def init_ui(self):
@@ -165,7 +174,7 @@ class AutoClickerApp(QWidget):
 
             self.setLayout(layout)
         except Exception as e:
-            print(f"Error setting up UI components: {e}")
+            show_error_message(f"Error setting up UI components: {e}")
             sys.exit(1)
 
     # Set click interval
@@ -176,9 +185,9 @@ class AutoClickerApp(QWidget):
             self.interval_label.setText(f'Click interval: {click_interval * 1000} ms')
             print(f"Click interval set to {click_interval * 1000} ms")
         except ValueError as ve:
-            print(f"Error converting interval value: {ve}")
+            show_error_message(f"Invalid value for interval: {ve}")
         except Exception as e:
-            print(f"Unexpected error in setting click interval: {e}")
+            show_error_message(f"Unexpected error in setting click interval: {e}")
 
     # Set click type (single or double)
     def set_click_type(self):
@@ -205,12 +214,12 @@ class AutoClickerApp(QWidget):
                     click_count = int(self.repeat_input.text())
                     print(f"Fixed repeat mode set to {click_count} clicks")
                 except ValueError:
-                    print("Invalid value for repeat count")
+                    show_error_message("Invalid value for repeat count")
             else:
                 repeat_mode = 'none'
                 print("Repeat mode set to 'None'")
         except Exception as e:
-            print(f"Error setting repeat mode: {e}")
+            show_error_message(f"Error setting repeat mode: {e}")
 
     # Update cursor position from input
     def update_cursor_position(self):
@@ -229,7 +238,7 @@ class AutoClickerApp(QWidget):
             QTimer.singleShot(3000, self.record_cursor_position)  
             print("Picking location...")
         except Exception as e:
-            print(f"Error picking location: {e}")
+            show_error_message(f"Error picking location: {e}")
 
     # Record cursor position
     def record_cursor_position(self):
@@ -241,7 +250,7 @@ class AutoClickerApp(QWidget):
             self.pick_button.setText("Pick Location")
             print(f"Cursor position recorded: ({x}, {y})")
         except Exception as e:
-            print(f"Error recording cursor position: {e}")
+            show_error_message(f"Error recording cursor position: {e}")
 
     # Toggle start/stop clicking with hotkey (F4)
     def toggle_clicking(self):
@@ -285,7 +294,7 @@ class AutoClickerApp(QWidget):
             dialog = HotkeyDialog(self)
             dialog.exec_()
         except Exception as e:
-            print(f"Error opening hotkey dialog: {e}")
+            show_error_message(f"Error opening hotkey dialog: {e}")
 
     # Update hotkey in UI and functionality
     def update_hotkey(self, new_hotkey):
@@ -331,7 +340,7 @@ class HotkeyDialog(QDialog):
                 self.accept()
                 self.parent().update_hotkey(hotkey)
         except Exception as e:
-            print(f"Error handling key press: {e}")
+            show_error_message(f"Error handling key press: {e}")
 
 
 # Main entry point
@@ -342,5 +351,5 @@ if __name__ == '__main__':
         window.show()
         sys.exit(app.exec_())
     except Exception as e:
-        print(f"Error running the app: {e}")
+        show_error_message(f"Error running the app: {e}")
         sys.exit(1)
