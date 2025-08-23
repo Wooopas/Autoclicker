@@ -5,34 +5,68 @@ The concept was not invented by me in any way. I just wanted a small project for
 
 TODO:
 
-1. Find or make a new and a better UI.
-2. Fix error handling on user's side.
+1. Transfer everything into web, only have an application running for the actions.
 
 # UI
-
-![image](https://github.com/user-attachments/assets/dd156837-7e45-4d08-bc61-a14f99b768f9)
-![image](https://github.com/user-attachments/assets/fdefcfa6-0d7f-49f4-88ec-2f823fc3b2b7)
+<img width="398" height="789" alt="image" src="https://github.com/user-attachments/assets/e62dd1e9-a83d-4ab4-b009-b8490e0e7909" />
+<img width="394" height="789" alt="image" src="https://github.com/user-attachments/assets/2bf7bcf8-4ceb-450a-a28d-8680e9d4739f" />
 
 # Features
 
+## 🎯 **Core Functionality**
 1. **Automatic Clicking**:
-   - Simulate **single** or **double** clicks with **left** or **right** mouse buttons.
+   - Simulate **single** or **double** clicks with **left** or **right** mouse buttons
+   - Precise cursor positioning with **X/Y coordinate** inputs
 
 2. **Adjustable Click Interval**:
-   - Set the click interval between **50 ms to 5000 ms**.
+   - Set click intervals from **50ms to 5000ms** with real-time slider feedback
+   - Live interval display showing current timing
 
-3. **Repeat Modes**:
-   - **Fixed Times**: Click a set number of times.
-   - **Until Stopped**: Keep clicking until stopped.
+3. **Flexible Repeat Modes**:
+   - **Fixed Times**: Click a specific number of times and stop automatically
+   - **Until Stopped**: Continuous clicking until manually stopped
 
-4. **Cursor Position**:
-   - Manually enter the cursor's X and Y position or pick it from the screen.
+## 🌐 **Global Hotkey System**
+4. **Dual Hotkey Support**:
+   - **Toggle hotkey** (default: F4) - Start/stop clicking from anywhere
+   - **Force stop hotkey** (default: F5) - Emergency stop from any application
+   - **Customizable keybinds** - Change hotkeys to any key you prefer
 
-5. **Hotkey Support**:
-   - Start/Stop clicking with a customizable **hotkey** (default: F4).
+5. **System-Wide Operation**:
+   - Works even when the application is minimized or in background
+   - Global hotkeys function across all applications
 
-6. **User Interface**:
-   - Simple, easy-to-use GUI with **Dark/Light mode** toggle.
+## 📍 **Smart Positioning**
+6. **Advanced Cursor Position**:
+   - **Visual coordinate system** with color-coded X (blue) and Y (green) inputs
+   - **Pick location tool** with 3-second countdown for precise positioning
+   - **Real-time position display** showing current coordinates
+   - Manual coordinate entry with input validation
+
+## 🎨 **Modern User Interface**
+7. **Customizable Appearance**:
+   - **Dark/Light theme** toggle with optimized contrast
+   - **Custom color picker** for 6 different UI elements:
+     - Header background, accent colors, success/error colors, coordinate colors
+   - **Always on top** option to keep the window visible
+
+8. **Professional Design**:
+   - Modern **CustomTkinter** interface with smooth animations
+   - **Responsive layout** with clear visual hierarchy
+   - **Intuitive controls** with emoji icons and descriptive labels
+
+## ⚡ **Quality of Life Features**
+9. **User-Friendly Experience**:
+   - **Live feedback** for all settings and status updates
+   - **Error handling** with helpful error messages
+   - **Session persistence** for custom colors and settings
+   - **Compact design** optimized for efficiency without sacrificing functionality
+
+10. **Advanced Controls**:
+    - **Info dialog** with hotkey reference
+    - **Keybind customization** dialog for easy hotkey changes
+    - **Color reset** option to restore default appearance
+    - **Status indicators** with color-coded ready/clicking states
 
 # Requirements
 
