@@ -8,8 +8,9 @@ TODO:
 1. Transfer everything into web, only have an application running for the actions.
 
 # UI
-<img width="398" height="789" alt="image" src="https://github.com/user-attachments/assets/e62dd1e9-a83d-4ab4-b009-b8490e0e7909" />
-<img width="394" height="789" alt="image" src="https://github.com/user-attachments/assets/2bf7bcf8-4ceb-450a-a28d-8680e9d4739f" />
+<img width="395" height="796" alt="image" src="https://github.com/user-attachments/assets/469c7d2b-611a-485e-a4b4-19c8cf4e6747" />
+<img width="393" height="788" alt="image" src="https://github.com/user-attachments/assets/59f59b0f-1642-4e53-be66-52b84a754a7d" />
+
 
 # Features
 
